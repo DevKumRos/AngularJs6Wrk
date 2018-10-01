@@ -1,3 +1,5 @@
-<p>
-  department works!
-</p>
+<h2> Department-list </h2>
+<span >{{errorMessage}}</span>
+<ul *ngFor="let department of departments">
+<li>{{department.deptId}}--{{department.deptName}}</li>
+</ul>

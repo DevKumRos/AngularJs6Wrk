@@ -17,7 +17,7 @@ export class EmpolyeeServiceService {
  
   
   getEmpolyees(): Observable<IEmployee[]> {
-   return this.httpClient.get<IEmployee[]>("http://localhost:9092/employeesq").catch(this.errorHandler);
+   return this.httpClient.get<IEmployee[]>("http://localhost:9092/employees").catch(this.errorHandler);
   }
   
   errorHandler(error: HttpErrorResponse) {

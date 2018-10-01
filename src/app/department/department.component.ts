@@ -1,3 +1,4 @@
+import { DepartmentService } from '../department.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DepartmentComponent implements OnInit {
 
-  constructor() { }
+ public departments = [];
+  public errorMessage;
+  
+  constructor(private _deptService : DepartmentService) { }
 
   ngOnInit() {
+    this._deptService.getDepartments().subscribe(data => this.departments = data,
+     error => this.errorMessage = error);
   }
+
 
 }
