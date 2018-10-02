@@ -1,13 +1,17 @@
 import { DepartmentComponent } from './department/department.component';
 import { EmpolyeeDetailsComponent } from './empolyee-details/empolyee-details.component';
 import { EmpolyeeListComponent } from './empolyee-list/empolyee-list.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  {path : "", redirectTo : '/departments', pathMatch:'full'}, /* Default Home page */
   {path : 'departments', component : DepartmentComponent},
   {path : 'employees', component : EmpolyeeListComponent},
-  {path : 'employeedetails', component : EmpolyeeDetailsComponent}
+  {path : 'employeedetails/:id', component : EmpolyeeDetailsComponent},
+  {path : 'employeedetails', component : EmpolyeeDetailsComponent},
+  {path : "**", component : PageNotFoundComponent} /* If any url not found page */
 ];
 
 @NgModule({
@@ -16,5 +20,8 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule {}
-export const routingComponent = [DepartmentComponent, EmpolyeeDetailsComponent, EmpolyeeListComponent];
+export const routingComponent = [ DepartmentComponent, 
+                                  EmpolyeeDetailsComponent, 
+                                  EmpolyeeListComponent, 
+                                  PageNotFoundComponent];
 

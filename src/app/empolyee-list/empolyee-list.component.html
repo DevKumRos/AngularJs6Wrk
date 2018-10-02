@@ -1,5 +1,5 @@
 <h2> Empolyee-list </h2>
 <span >{{errorMessage}}</span>
 <ul *ngFor="let employee of employees">
-<li>{{employee.id}}--{{employee.name}}</li>
+<li class="button" (click)="onSelectedEmployee(employee)">{{employee.name}}</li>
 </ul>

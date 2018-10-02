@@ -10,6 +10,7 @@ import { RegistrationComponent } from './registration/registration.component';
 import { StructuraltestComponent } from './structuraltest/structuraltest.component';
 import { EmpolyeeServiceService } from './empolyee-service.service';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     RegistrationComponent,
     StructuraltestComponent,
-    routingComponent
+    routingComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
