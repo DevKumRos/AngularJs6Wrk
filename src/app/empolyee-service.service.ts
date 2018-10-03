@@ -1,4 +1,5 @@
-import { IEmployee } from './employee';
+import { IEmployee} from './employee';
+import { IEmployeeDetail } from './employeeDetail';
 import { HttpErrorResponse } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
@@ -23,6 +24,10 @@ export class EmpolyeeServiceService {
   errorHandler(error: HttpErrorResponse) {
     console.log("Kumar - "+error.message);
     return Observable.throw(error.message || "Server Error");
+  }
+  
+  getEmpolyeeDetailById(empId) : Observable<IEmployeeDetail> {
+    return this.httpClient.get<IEmployeeDetail>("http://localhost:9092/employeedetails/"+empId).catch(this.errorHandler);
   }
 
 }
