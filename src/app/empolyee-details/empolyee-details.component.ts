@@ -26,7 +26,7 @@ export class EmpolyeeDetailsComponent implements OnInit {
   public empolyeeId;
   public employeeDetail: IEmployeeDetail;
   public errorMessage;
-  
+  public blankSpace = "&nbsp;&nbsp;";
   gotoEmployeeList(){
     this.router.navigate(['/employees', {id: this.empolyeeId}]);
     

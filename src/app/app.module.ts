@@ -11,6 +11,8 @@ import { StructuraltestComponent } from './structuraltest/structuraltest.compone
 import { EmpolyeeServiceService } from './empolyee-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 
 
@@ -20,7 +22,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     RegistrationComponent,
     StructuraltestComponent,
     routingComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,

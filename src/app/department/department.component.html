@@ -1,6 +1,10 @@
 <h1> Department list </h1>
 <span >{{errorMessage}}</span>
-
+<div>
+<button class="button" (click)="showOverview()">Overview</button><span [innerHTML]="blankSpace"></span>
+<button class="button" (click)="showContact()">Contact</button>
+</div>
+<div [innerHTML]="blankSpace"></div>
 <table>
 <tr>
 <th>DepartmentId</th>
@@ -11,4 +15,7 @@
 <td>{{department.deptName}}</td>
 </tr>
 </table>
+
+<router-outlet></router-outlet>
+
 
